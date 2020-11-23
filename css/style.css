@@ -1,0 +1,730 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+/*menu nav*/
+nav{
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+nav a{
+	color: #fff;
+	text-decoration: none;
+    /*border: 1px solid #fff;*/
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 0;
+    animation: moverDerecha 2s ease-in;
+}
+
+.icono{
+	display: block;
+	z-index: 1000000000;
+	animation: moverIzquierda 2s ease-in;
+}
+/*header*/
+header{
+	background: ;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3a7bd5, #00d2ff);
+	 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	height: auto;
+	padding: 60px;
+	width: 100%;
+}
+
+/*contenedor*/
+.conteiner{
+	width: 95%;
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: auto;
+}
+
+/*imagen*/
+img{
+	display: block;
+	height: 450px;
+	object-fit: cover;
+	width: auto;
+
+	/*hacer aparecer a la imagen*/
+	animation: ariba 2s ease-in;
+}
+
+/*textos*/
+.textos{
+	width: 50%;
+	color: #fff;
+}
+
+.textos h1{
+	font-size: 70px;
+	text-align:center;
+	animation: moverDerecha 2s ease-in;
+}
+
+.textos h2{
+	font-size: 20px;
+	animation: moverIzquierda 2s ease-in;
+}
+
+.textos a{
+	font-size: 16px;
+	display: inline-block;
+	color: #fff;
+	font-weight: 300;
+	text-decoration: none;
+	margin-top: 30px;
+	border: 1px solid #fff;
+	width: 200px;
+	border-radius: 3px;
+	text-align: center;
+	padding: 10px 0;
+	animation: moverDerecha 2s ease-in;
+}
+
+/* efecto wave*/
+.wave{
+	height: 90px;
+	width: 100%;
+	background: #00d2ff;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3a7bd5, #00d2ff);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wave svg{
+	animation: abajo 2s ease-in;
+}
+
+/*el menu*/
+.enlaces{
+	position: fixed;
+	display: flex;
+	top: 0;
+	justify-content: space-around;
+	align-items: center;
+	height: 100vh;
+	right: 0;
+	flex-direction: column;
+	width: 100%;
+	transition: all 2s ease-in;
+
+	background: #56CCF2;  
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2F80ED, #56CCF2); 
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.uno{
+	clip-path: circle(0% at 1% 0);
+}
+
+.dos{
+	clip-path: circle(150% at 1% 0);
+}
+
+
+/*===========================================*/
+/*dar efectos que aparesca desde la izquierda*/
+@keyframes moverIzquierda{
+	0%{
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+/*efecto de la derecha*/
+@keyframes moverDerecha{
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+/*dar efectos mover desde habajo hacia ariba*/
+@keyframes ariba{
+	0%{
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+/*far el efecto de aparecer de avajo hacia ariba*/
+@keyframes abajo{
+	0%{
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: (0);
+	}
+}
+
+/* resposnive*/
+@media screen and (max-width: 1000px){
+	img{
+		height: 400px;
+	}
+
+	.textos	 h1{
+		font-size: 70px;
+	}
+
+	.textos	 h2{
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	img{
+		height: 300px;
+	}
+
+	.textos h1{
+		font-size: 60px;
+	}
+
+	.textos	 h2{
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	img{
+		height: 280px;
+	}
+
+	.textos h1{
+		font-size: 50px;
+	}
+
+	.textos	 h2{
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	img{
+		height: 200px;
+	}
+
+	.textos h1{
+		font-size: 45px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.conteiner{
+		width: 100%;
+		height: 100%;
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+	}
+
+	img{
+		height: 150;
+	}
+
+	.textos h1{
+		font-size: 50px;
+	}
+
+	.textos	 h2{
+		font-size: 20px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 350px){
+	img{
+		height: 1400;
+	}
+
+	.texto{
+		width: 100%;
+		text-align: justify;
+	}
+
+	.textos h1{
+		font-size: 40px;
+	}
+
+	.textos	 h2{
+		font-size: 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenedor{
+	padding: 60px 0;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden; /*no dejar que salgan del contenedor*/
+}
+
+.titulo{
+	color: #00d2ff;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+/*nav*/
+
+nav{
+	text-align: right;
+	padding: 30px 50px 0 0;
+}
+
+nav > a{
+	color: #000;
+	font-weight: 300;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+nav > a:hover{
+	text-decoration: underline;
+}
+
+.textos-header h1{
+	font-size: 50px;
+	color:#fff;
+}
+
+.textos-header h2{
+	font-size: 30px;
+	font-weight: 300;
+	color: #fff;
+}
+
+header .textos-header{
+	display: flex;
+	height: 430px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+/*
+.wave{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+*/
+
+/* about us*/
+main .sobre-nosotros{
+	padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.imagen_about_as{
+	width: 48%;
+}
+
+.sobre-nosotros .contenido_textos{
+	width:48%;
+}
+
+.contenido_textos h3{
+	margin-bottom: 15px;
+}
+
+.contenido_textos h3 span{
+	background: linear-gradient(to right, #3a7bd5, #00d2ff);
+	color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	box-shadow: 0  0 6px 0 rgba(0, 0, 0, .5);
+	margin-right: 5px;
+}
+
+.contenido_textos p{
+	padding: 0px 0px 30px 15px;
+	font-weight: 300;
+	text-align: justify;
+}
+
+.video{
+	background:#f2f2f2;
+}
+
+/* galeria */
+.portafolio{
+	background:#f2f2f2;
+}
+
+.galeria-port{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.imagen-port{
+	width: 24%;
+	margin-bottom: 10px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port img{
+	width: 100%;
+	height:100%;
+	object-fit: cover;
+	display: block;
+}
+
+.hover-galeria{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	transform: scale(0);
+	background: hsla(196 , 80%, 51%, 0.4);
+	transition: transform .5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.hover-galeria img{
+	width: 50px;
+	height: 50px;
+}
+
+.hover-galeria p{
+	font-family: "Arial";
+	color: #000;
+}
+
+.imagen-port:hover .hover-galeria{
+	transform: scale(1);
+}
+
+/* clientes o clients*/
+
+.cards{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.cards .card{
+	background: linear-gradient(to right, #3a7bd5, #00d2ff);
+	display: flex;
+	width: 46%;
+	height: 200px;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 5px;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	display: block;
+}
+
+.cards .card > .contenido-texto-card{
+	width: 60%;
+	color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+	font-weight: 300;
+	padding-top: 5px;
+}
+
+/*Contactanos*/
+.contactanos{
+	background: #f2f2f2;
+	padding-bottom: 30px;
+}
+
+
+/* our team */
+.about-services{
+	background: #f2f2f2;
+	padding-bottom: 30px;
+}
+
+.servicio-cont{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.servicio-ind {
+	width: 28%;
+	text-align: center;
+}
+
+.servicio-ind img{
+	width: 90%;
+	height: 50%;
+}
+
+.servicio-ind h3{
+	margin: 10px 0;
+}
+
+.servicio-ind p{
+	font-weight: 300;
+	text-align: justify;
+}
+
+/* footer */
+footer{
+	background: linear-gradient(to right, #3a7bd5, #00d2ff);
+	padding: 60px 0 30px 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+.contenedor-footer{
+	display: flex;
+	width: 90%;
+	justify-content: space-evenly;
+	margin: auto;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+	text-align: center;
+}
+
+.content-foo h4{
+	color: #fff;
+	border-bottom: 3px solid #af20d3;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.content-foo p{
+	color: #ccc;
+}
+
+.titulo-final{
+	text-align: center;
+	font-size: 24px;
+	margin: 20px 0 0 0;
+	color: #9e9797;
+}
+
+/* ============ HACER RESPONSIVE de 900px==============*/
+@media screen and (max-width:900px){
+	header{
+		background-position: center;
+	}
+
+	/* sobre nosotros*/
+	.contenedor-sobre-nosotros{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.sobre-nosotros .contenido_textos{
+		width: 90%;
+	}
+
+	.imagen_about_as{
+		width: 90%;
+	}
+
+	/* galeria*/
+	.imagen-port{
+		width: 44%;
+	}
+
+	/* contactos*/
+	.cards{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.cards .card{
+		width: 90%;
+	}
+
+	.cards .card:first-child{
+		margin-bottom: 30px;
+	}
+
+	/* servicios */
+	.servicio-cont{
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.servicio-ind {
+		width: 100%;
+		height: 50%
+		text-align: center;
+	}
+
+	.servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+		margin-bottom: 60px;
+	}
+
+	.servicio-ind img{
+		width: 50%;
+		height: 50%;
+	}
+}
+
+/* ============ HACER RESPONSIVE de 250px==============*/
+@media screen and (max-width: 250px){
+	nav{
+		text-align: center;
+		padding: 30px 0 0 0;
+	}
+
+	nav > a{
+		margin-right: 5px;
+	}
+
+	.textos-header h1{
+		font-size: 35px;
+	}
+
+	.textos-header h2{
+		font-size: 20px;
+	}
+
+	/* ABOUTS US*/
+	.imagen_about_as{
+		margin-bottom: 60px;
+		width: 99%;
+	}
+
+	.sobre-nosotros .contenido_textos{
+		width: 95%;
+	}
+
+	/* Galeria o portafolio*/
+	.imagen-port{
+		width: 99%;
+	}
+
+	/* clientes */
+	.cards .card{
+		height: 450px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cards .card img{
+		width: 90px;
+		height: 90px;
+	}
+
+	/* footer*/
+	.contenedor-footer{
+		font-size: 12px;
+		flex-direction: column;
+		border: none;
+	}
+
+	.content-foo{
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.content-foo h4{
+		border: none;
+	}
+
+	.content-foo p{
+		color: #ccc;
+		border-bottom: 1px solid #f2f2f2;
+		padding: 20px;
+	}
+
+	.titulo-final{
+		font-size: 20px;
+		text-align: center;
+	}
+
+}
